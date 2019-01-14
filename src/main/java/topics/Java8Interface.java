@@ -66,4 +66,6 @@ public class Java8Interface implements Interface1, Interface2 {
         Interface1.statMethod();
         Interface2.statMethod();
     }
+    
+    // test comment. remove this
 }
