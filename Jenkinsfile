@@ -7,7 +7,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking Out ...'
-                def scmVars = checkout scm
+                def scmVars = 'checkout scm'
                 echo scmVars.GIT_COMMIT
             }
         }
