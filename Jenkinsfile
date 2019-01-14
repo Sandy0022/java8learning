@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'maven 3'
-        jdk 'java 8'
+        // jdk 'java 8'
     }
     options {
         skipDefaultCheckout(true)
