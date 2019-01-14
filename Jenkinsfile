@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Compile') {
+            steps {
+                echo 'Compiling ...'
+                mvn compile
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building ...'
