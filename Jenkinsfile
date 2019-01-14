@@ -13,7 +13,9 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Compiling ...'
-                sh "mvn clean compile"
+                dir("project_templates/java_project_template") {
+                    sh 'mvn clean verify
+                }
             }
         }
         stage('Build') {
