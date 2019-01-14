@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    tools {
-        maven 'Maven 3.3.9'
-        jdk 'jdk8'
-    }
     options {
         skipDefaultCheckout(true)
     }
@@ -17,7 +13,9 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Compiling ...'
-                sh 'mvn compile'
+                withMaven() {
+                    sh "mvn compile"
+                }
             }
         }
         stage('Build') {
