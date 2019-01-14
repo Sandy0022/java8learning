@@ -7,7 +7,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking Out ...'
-                mvn compile
+                // def scmVars =
+                checkout scm
+                //def commitHash = scmVars.GIT_COMMIT
             }
         }
         stage('Compile') {
