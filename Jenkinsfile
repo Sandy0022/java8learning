@@ -1,6 +1,15 @@
 pipeline {
     agent any
+    options {
+        skipDefaultCheckout(true)
+    }
     stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking Out ...'
+                mvn compile
+            }
+        }
         stage('Compile') {
             steps {
                 echo 'Compiling ...'
